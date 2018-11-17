@@ -9,7 +9,7 @@
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="@dimen/height_top_bar"
-        android:background="@color/top_bar_normal_bg"
+        android:background="@color/holo_red_light"
         android:gravity="center_vertical" >
 
         <include layout="@layout/ease_commom_back_btn" />
@@ -28,13 +28,13 @@
         android:background="#FFFFFF"
         android:orientation="vertical"
         >
-        <RelativeLayout 
+        <RelativeLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             >
-            <ImageView 
+            <ImageView
                 android:id="@+id/user_head_avatar"
                 android:layout_width="60dip"
                 android:layout_height="60dip"
@@ -44,7 +44,9 @@
                 android:scaleType="centerCrop"
                 android:src="@drawable/em_default_avatar"
                 />
-            <ImageView 
+                <!--android:src="@drawable/em_default_avatar"-->
+
+            <ImageView
                 android:id="@+id/user_head_headphoto_update"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

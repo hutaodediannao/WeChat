@@ -68,7 +68,7 @@
             android:layout_marginRight="6dp"
             android:layout_marginTop="3dp"
             android:layout_weight="1"
-            android:background="@drawable/key_bord_shapre"
+            android:background="@drawable/key_bord_shape"
             android:gravity="bottom" >
 
             <EditText
@@ -82,8 +82,8 @@
                 android:paddingBottom="3dp"
                 android:paddingLeft="10dp"
                 android:paddingRight="1dp"
-                android:text="1234566"
                 android:paddingTop="3dp"
+                android:hint="请输入内容:"
                 android:textSize="14sp"
                 android:layout_toLeftOf="@+id/rl_face"
                 android:imeOptions="actionSend"/>

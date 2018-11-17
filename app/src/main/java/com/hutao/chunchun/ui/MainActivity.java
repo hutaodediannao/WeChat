@@ -67,8 +67,8 @@ public class MainActivity extends BaseActivity {
 
 	private Button[] mTabs;
 	private ContactListFragment contactListFragment;
-//    private SettingsFragment settingFragment;
-	private UserFragment userFragment;//用户自定义扩展Fragment
+    private SettingsFragment settingFragment;
+//	private UserFragment userFragment;//用户自定义扩展Fragment
 
 	private Fragment[] fragments;
 	private int index;
@@ -135,31 +135,30 @@ public class MainActivity extends BaseActivity {
 		    EMLog.d(TAG, "get fragments from saveInstanceState");
 		    conversationListFragment = (ConversationListFragment) getSupportFragmentManager().getFragment(savedInstanceState, ConversationListFragment.class.getSimpleName());
 		    contactListFragment = (ContactListFragment) getSupportFragmentManager().getFragment(savedInstanceState, ContactListFragment.class.getSimpleName());
-//            settingFragment = (SettingsFragment) getSupportFragmentManager().getFragment(savedInstanceState, SettingsFragment.class.getSimpleName());
+            settingFragment = (SettingsFragment) getSupportFragmentManager().getFragment(savedInstanceState, SettingsFragment.class.getSimpleName());
+//			userFragment = (UserFragment) getSupportFragmentManager().getFragment(savedInstanceState, UserFragment.class.getSimpleName());
 
-			userFragment = (UserFragment) getSupportFragmentManager().getFragment(savedInstanceState, UserFragment.class.getSimpleName());
-
-//			fragments = new Fragment[]{conversationListFragment, contactListFragment, settingFragment};
-			fragments = new Fragment[]{conversationListFragment, contactListFragment, userFragment};
+			fragments = new Fragment[]{conversationListFragment, contactListFragment, settingFragment};
+//			fragments = new Fragment[]{conversationListFragment, contactListFragment, userFragment};
 
             getSupportFragmentManager().beginTransaction()
                     .show(conversationListFragment)
                     .hide(contactListFragment)
-//                    .hide(settingFragment)
-					.hide(userFragment)
+                    .hide(settingFragment)
+//					.hide(userFragment)
                     .commit();
         } else {
             conversationListFragment = new ConversationListFragment();
             contactListFragment = new ContactListFragment();
-//            settingFragment = new SettingsFragment();
-            userFragment = new UserFragment();
-//            fragments = new Fragment[]{conversationListFragment, contactListFragment, settingFragment};
-            fragments = new Fragment[]{conversationListFragment, contactListFragment, userFragment};
+            settingFragment = new SettingsFragment();
+//            userFragment = new UserFragment();
+            fragments = new Fragment[]{conversationListFragment, contactListFragment, settingFragment};
+//            fragments = new Fragment[]{conversationListFragment, contactListFragment, userFragment};
 
             getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, conversationListFragment)
                     .add(R.id.fragment_container, contactListFragment).hide(contactListFragment)
-//                    .add(R.id.fragment_container, settingFragment).hide(settingFragment)
-                    .add(R.id.fragment_container, userFragment).hide(userFragment)
+                    .add(R.id.fragment_container, settingFragment).hide(settingFragment)
+//                    .add(R.id.fragment_container, userFragment).hide(userFragment)
                     .show(conversationListFragment)
                     .commit();
         }
