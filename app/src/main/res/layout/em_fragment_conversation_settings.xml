@@ -21,6 +21,37 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+                <com.hutao.chunchun.widget.RecyclingImageView
+                    android:id="@+id/iv_avatar"
+                    android:layout_width="@dimen/adaptive_50dp"
+                    android:layout_height="@dimen/adaptive_50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:scaleType="centerCrop"
+                    android:layout_marginLeft="@dimen/adaptive_10dp"
+                    android:src="@drawable/ic_launcher"/>
+
+                <TextView
+                    android:text="铁匠自动化"
+                    android:layout_toRightOf="@+id/iv_avatar"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/adaptive_10dp"
+                    android:layout_marginRight="@dimen/adaptive_10dp"
+                    android:textSize="@dimen/adaptive_17sp"
+                    android:textColor="@color/holo_black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+
+
+            </RelativeLayout>
+
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -63,7 +94,6 @@
                     android:typeface="serif" />
             </RelativeLayout>
 
-
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dip"
@@ -77,6 +107,7 @@
                 android:layout_marginLeft="10dip"
                 android:layout_marginRight="10dip"
                 android:layout_marginTop="10dip"
+                android:visibility="gone"
                 android:orientation="vertical">
 
                 <TextView
@@ -85,6 +116,7 @@
                     android:gravity="bottom|left"
                     android:paddingLeft="10dip"
                     android:text="@string/notify"
+                    android:visibility="gone"
                     android:textColor="@color/btn_gray_pressed" />
 
                 <TextView
@@ -97,6 +129,30 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_user_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dip"
+                    android:background="@drawable/em_btn_bottom_selector"
+                    android:padding="10dip">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="10dip"
+                        android:text="@string/title_user_profile"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/btn_gray_normal" />
 
                 <RelativeLayout
                     android:id="@+id/rl_switch_notification"
@@ -129,7 +185,7 @@
                     android:layout_height="1dip"
                     android:layout_marginLeft="10dip"
                     android:layout_marginRight="10dip"
-                    android:background="#E6E6E6" />
+                    android:background="@color/btn_gray_normal"/>
 
                 <RelativeLayout
                     android:id="@+id/rl_switch_sound"
@@ -162,7 +218,7 @@
                     android:layout_height="1dip"
                     android:layout_marginLeft="10dip"
                     android:layout_marginRight="10dip"
-                    android:background="#E6E6E6" />
+                    android:background="@color/btn_gray_normal" />
 
                 <RelativeLayout
                     android:id="@+id/rl_switch_vibrate"
@@ -226,6 +282,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dip"
+                    android:visibility="gone"
                     android:layout_marginRight="10dip"
                     android:layout_marginTop="10dip"
                     android:orientation="vertical">
@@ -236,6 +293,7 @@
                         android:gravity="bottom|left"
                         android:paddingLeft="10dip"
                         android:text="@string/chatset"
+                        android:visibility="gone"
                         android:textColor="@color/btn_gray_pressed" />
 
                     <TextView
@@ -346,31 +404,7 @@
                     android:layout_height="1dip"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
-                    android:background="@color/btn_gray_normal" />
-
-
-                <LinearLayout
-                    android:id="@+id/ll_user_profile"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dip"
-                    android:background="@drawable/em_btn_bottom_selector"
-                    android:padding="10dip">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:paddingLeft="10dip"
-                        android:text="@string/title_user_profile"
-                        android:textColor="@android:color/black"
-                        android:textSize="14sp" />
-                </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dip"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
+                    android:visibility="gone"
                     android:background="@color/btn_gray_normal" />
 
 
@@ -422,6 +456,7 @@
                     android:layout_height="1dip"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
+                    android:visibility="gone"
                     android:background="@color/btn_gray_normal" />
 
                 <LinearLayout
@@ -448,6 +483,7 @@
                     android:layout_height="1dip"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
+                    android:visibility="gone"
                     android:background="@color/btn_gray_normal" />
 
                 <LinearLayout
@@ -473,6 +509,7 @@
                     android:layout_height="1dip"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
+                    android:visibility="gone"
                     android:background="@color/btn_gray_normal" />
 
                 <LinearLayout
@@ -480,6 +517,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dip"
                     android:background="@drawable/em_btn_bottom_selector"
+                    android:visibility="gone"
                     android:padding="10dip">
 
                     <TextView
@@ -497,6 +535,7 @@
                     android:layout_height="1dip"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
+                    android:visibility="gone"
                     android:background="@color/btn_gray_normal" />
 
                 <LinearLayout
@@ -504,6 +543,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dip"
                     android:background="@drawable/em_btn_bottom_selector"
+                    android:visibility="gone"
                     android:padding="10dip">
 
                     <TextView
@@ -523,6 +563,7 @@
                 android:layout_height="1dip"
                 android:layout_marginLeft="10dip"
                 android:layout_marginRight="10dip"
+                android:visibility="gone"
                 android:background="#E6E6E6" />
 
             <RelativeLayout
@@ -530,6 +571,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dip"
                 android:background="@drawable/em_btn_bottom_selector"
+                android:visibility="gone"
                 android:padding="10dip">
 
                 <TextView
@@ -556,6 +598,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dip"
                 android:background="@drawable/em_btn_bottom_selector"
+                android:visibility="gone"
                 android:padding="10dip">
 
                 <TextView
@@ -581,6 +624,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dip"
                 android:background="@drawable/em_btn_bottom_selector"
+                android:visibility="gone"
                 android:padding="10dip">
 
                 <TextView
@@ -606,6 +650,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dip"
                 android:background="@drawable/em_btn_bottom_selector"
+                android:visibility="gone"
                 android:padding="10dip">
 
                 <TextView
@@ -678,6 +723,13 @@
                     android:layout_centerVertical="true" />
             </RelativeLayout>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/btn_gray_normal" />
+
             <RelativeLayout
                 android:id="@+id/rl_msg_roaming"
                 android:layout_width="match_parent"
@@ -708,6 +760,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dip"
                 android:background="@drawable/em_btn_bottom_selector"
+                android:visibility="gone"
                 android:padding="10dip">
 
                 <TextView
@@ -728,10 +781,16 @@
                     android:layout_centerVertical="true" />
             </RelativeLayout>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/btn_gray_normal" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dip"
                 android:background="#ffffff"
                 android:orientation="vertical">
 

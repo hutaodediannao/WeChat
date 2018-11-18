@@ -27,7 +27,7 @@
     <application
         android:name=".CcApplication"
         android:allowBackup="true"
-        android:icon="@drawable/em_logo_uidemo"
+        android:icon="@drawable/tie_jiang"
         android:label="@string/app_name">
 
         <!-- 适配Android 7.0, 需要将下方的com.hyphenate.chatuidemo替换为你的app包名 -->
@@ -59,7 +59,7 @@
         <activity
             android:name=".ui.SplashActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/horizontal_slide">
+            android:theme="@style/splash_style">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
